@@ -1,9 +1,9 @@
 ---
 layout: layouts/blog.njk
-title: Blog
-date: 2017-01-01
-permalink: /blog/index.html
+title: Home
+date: 2016-01-01T00:00:00.000Z
+permalink: /
 eleventyNavigation:
-  key: Blog
-  order: 2
+  key: Home
+  order: 0
 ---
