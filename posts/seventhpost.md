@@ -1,8 +1,8 @@
 ---
-title: This is my fourth post
-date: 2017-02-03T00:00:00.000Z
+title: This is my seventh post
+date: 2018-04-03T00:00:00.000Z
 author: John Doe
-summary: Why contemplating our mortality can be a powerful catalyst for change fourth post
+summary: Why contemplating our mortality can be a powerful catalyst for change seventh post
 tags:
   - environment
   - politics
