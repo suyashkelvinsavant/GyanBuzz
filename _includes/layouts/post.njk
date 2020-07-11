@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 section: post
 ---
-
+<link rel="stylesheet" href="/_includes/assets/css/post.css">
 <article>
   <h1>{{ title }}</h1>
   <p>
@@ -10,9 +10,8 @@ section: post
       <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time> by <a href="/authors/{{ author | slug }}/">{{ author }}</a>
     </small>
   </p>
-
   {{ layoutContent | safe }}
-
+  
   {% if tags %}
     <p>
     {% for tag in tags %}
@@ -27,5 +26,6 @@ section: post
 </article>
 
 <nav>
-  <a href="{{ '/blog/' | url }}">← Blog index</a>
+  <a href="{{ '/' | url }}">← Back</a>
 </nav>
+
