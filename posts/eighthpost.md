@@ -2,7 +2,7 @@
 title: This is my eighth post
 date: 2019-02-03T00:00:00.000Z
 author: John Doe
-summary: Why contemplating our mortality can be a powerful catalyst for change fourth post
+summary: Why contemplating our mortality can be a powerful catalyst for change eighth post
 tags:
   - environment
   - politics

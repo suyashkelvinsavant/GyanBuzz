@@ -94,4 +94,7 @@ html::-webkit-scrollbar-track {
 ::selection {
   color: white;
   background: rgb(255, 0, 119);
-}  
+}
+.text-pink-500{
+  color:#ff007b
+}
