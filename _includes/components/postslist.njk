@@ -7,7 +7,16 @@
                 <div class="bg-black p-6">
             <a href="{{ postslist[postslist.length-1].url | url }}">
                     <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://source.unsplash.com/random/720x400" alt="content">
-                    <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">SUBTITLE</h3>
+                    <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">{% if postslist[0].data.tags %}
+						<p>
+							{% for tag in postslist[postslist.length-1].data.tags %}
+							{%- if tag != "post" -%}
+							{% set tagUrl %}/tags/{{ tag }}/{% endset %}
+							<a href="{{ tagUrl | url }}" rel="tag">{{ tag | capitalize }}</a>
+							{%- endif -%}
+							{% endfor %}
+						</p>
+						{% endif %}</h3>
                     <h2 class="text-lg text-white font-medium title-font mb-4">{% if postslist[postslist.length-1].data.title %}{{ postslist[postslist.length-1].data.title }}{% else %}Untitled{% endif %}</h2>
                     <p class="leading-relaxed text-base">{{ postslist[postslist.length-1].data.summary }}</p>
             </a>
@@ -17,7 +26,16 @@
                 <div class="bg-black p-6">
             <a href="{{ postslist[postslist.length-2].url | url }}">
                     <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://source.unsplash.com/random/721x401" alt="content">
-                    <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">SUBTITLE</h3>
+                    <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">{% if postslist[0].data.tags %}
+						<p>
+							{% for tag in postslist[postslist.length-2].data.tags %}
+							{%- if tag != "post" -%}
+							{% set tagUrl %}/tags/{{ tag }}/{% endset %}
+							<a href="{{ tagUrl | url }}" rel="tag">{{ tag | capitalize}}</a>
+							{%- endif -%}
+							{% endfor %}
+						</p>
+						{% endif %}</h3>
                     <h2 class="text-lg text-white font-medium title-font mb-4">{% if postslist[postslist.length-2].data.title %}{{ postslist[postslist.length-2].data.title }}{% else %}Untitled{% endif %}</h2>
                     <p class="leading-relaxed text-base">{{ postslist[postslist.length-2].data.summary }}</p>
                     </a>
@@ -28,7 +46,16 @@
             <a href="{{ postslist[postslist.length-3].url | url }}">
 
                     <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://source.unsplash.com/random/722x402" alt="content">
-                    <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">SUBTITLE</h3>
+                    <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">{% if postslist[0].data.tags %}
+						<p>
+							{% for tag in postslist[postslist.length-3].data.tags %}
+							{%- if tag != "post" -%}
+							{% set tagUrl %}/tags/{{ tag }}/{% endset %}
+							<a href="{{ tagUrl | url }}" rel="tag">{{ tag | capitalize}}</a>
+							{%- endif -%}
+							{% endfor %}
+						</p>
+						{% endif %}</h3>
                     <h2 class="text-lg text-white font-medium title-font mb-4">{% if postslist[postslist.length-3].data.title %}{{ postslist[postslist.length-3].data.title }}{% else %}Untitled{% endif %}</h2>
                     <p class="leading-relaxed text-base">{{ postslist[postslist.length-3].data.summary }}</p>
                     </a>
@@ -44,7 +71,16 @@
             <a href="{{ postslist[postslist.length-4].url | url }}">
 
                     <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://source.unsplash.com/random/722x402" alt="content">
-                    <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">SUBTITLE</h3>
+                    <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">{% if postslist[0].data.tags %}
+						<p>
+							{% for tag in postslist[postslist.length-4].data.tags %}
+							{%- if tag != "post" -%}
+							{% set tagUrl %}/tags/{{ tag }}/{% endset %}
+							<a href="{{ tagUrl | url }}" rel="tag">{{ tag | capitalize}}</a>
+							{%- endif -%}
+							{% endfor %}
+						</p>
+						{% endif %}</h3>
                     <h2 class="text-lg text-white font-medium title-font mb-4">{% if postslist[postslist.length-4].data.title %}{{ postslist[postslist.length-4].data.title }}{% else %}Untitled{% endif %}</h2>
                     <p class="leading-relaxed text-base">{{ postslist[postslist.length-4].data.summary }}</p>
                     </a>
@@ -55,7 +91,16 @@
             <a href="{{ postslist[postslist.length-5].url | url }}">
 
                     <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://source.unsplash.com/random/720x400" alt="content">
-                    <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">SUBTITLE</h3>
+                    <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">{% if postslist[0].data.tags %}
+						<p>
+							{% for tag in postslist[postslist.length-5].data.tags %}
+							{%- if tag != "post" -%}
+							{% set tagUrl %}/tags/{{ tag }}/{% endset %}
+							<a href="{{ tagUrl | url }}" rel="tag">{{ tag | capitalize}}</a>
+							{%- endif -%}
+							{% endfor %}
+						</p>
+						{% endif %}</h3>
                     <h2 class="text-lg text-white font-medium title-font mb-4">{% if postslist[postslist.length-5].data.title %}{{ postslist[postslist.length-5].data.title }}{% else %}Untitled{% endif %}</h2>
                     <p class="leading-relaxed text-base">{{ postslist[postslist.length-5].data.summary }}</p>
                     </a>
@@ -66,7 +111,16 @@
             <a href="{{ postslist[postslist.length-6].url | url }}">
 
                     <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://source.unsplash.com/random/721x401" alt="content">
-                    <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">SUBTITLE</h3>
+                    <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">{% if postslist[0].data.tags %}
+						<p>
+							{% for tag in postslist[postslist.length-6].data.tags %}
+							{%- if tag != "post" -%}
+							{% set tagUrl %}/tags/{{ tag }}/{% endset %}
+							<a href="{{ tagUrl | url }}" rel="tag">{{ tag | capitalize}}</a>
+							{%- endif -%}
+							{% endfor %}
+						</p>
+						{% endif %}</h3>
                     <h2 class="text-lg text-white font-medium title-font mb-4">{% if postslist[postslist.length-6].data.title %}{{ postslist[postslist.length-6].data.title }}{% else %}Untitled{% endif %}</h2>
                     <p class="leading-relaxed text-base">{{ postslist[postslist.length-6].data.summary }}</p>
                     </a>
@@ -81,54 +135,8 @@
 	<section class="text-gray-700 body-font overflow-hidden">
 		<div class="container px-5 py-24 mx-auto">
 			<div class="-my-8">
-            <div class="py-8 flex flex-wrap md:flex-no-wrap">
-					<div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-						<span class="tracking-widest font-medium title-font text-gray-900">CATEGORY</span>
-
-						{% if postslist[0].data.tags %}
-						<p>
-							{% for tag in postslist[0].data.tags %}
-							{%- if tag != "post" -%}
-							{% set tagUrl %}/tags/{{ tag }}/{% endset %}
-							<a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
-							{%- endif -%}
-							{% endfor %}
-						</p>
-						{% endif %}
-						<span class="mt-1 text-gray-500 text-sm"><time datetime="{{ postslist[0].date | machineDate }}">
-								<small>{{ postslist[0].date | readableDate }} </time>
-							<p>
-								by
-								<a href="/authors/{{ postslist[0].data.author | slug }}/">{{ postslist[0].data.author }}</a>
-								</small>
-
-							</p>
-						</span>
-					</div>
-					<div class="md:flex-grow">
-						<h2 class="text-2xl font-medium text-gray-900 title-font mb-2"><a href="{{ postslist[0].url | url }}">
-								{% if postslist[0].data.title %}
-								{{ postslist[postslist.length-1].data.title }}
-								{% else %}
-								Untitled
-								{% endif %}
-							</a></h2>
-						{% if postslist[0].data.summary %}
-						<p class="leading-relaxed"  > {{ postslist[0].data.summary }}
-						</p>
-						{% endif %}
-
-						<a class="text-pink-500 inline-flex items-center mt-4" href="{{ postslist[0].url | url }}">Read
-							More
-							<svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
-								fill="none" stroke-linecap="round" stroke-linejoin="round">
-								<path d="M5 12h14"></path>
-								<path d="M12 5l7 7-7 7"></path>
-							</svg>
-						</a>
-					</div>
-				</div>
 				{% for post in postslist | reverse %}
+                <a href="{{ post.url | url }}">
 				<div class="py-8 flex flex-wrap md:flex-no-wrap">
 					<div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
 						<span class="tracking-widest font-medium title-font text-gray-900">CATEGORY</span>
@@ -162,8 +170,8 @@
 								{% endif %}
 							</a></h2>
 						{% if post.data.summary %}
-						<p class="leading-relaxed"  > {{ post.data.summary }}
-						</p>
+						<a href="{{ post.url | url }}"><p class="leading-relaxed"  > {{ post.data.summary }}
+						</p></a>
 						{% endif %}
 
 						<a class="text-pink-500 inline-flex items-center mt-4" href="{{ post.url | url }}">Read
@@ -176,6 +184,7 @@
 						</a>
 					</div>
 				</div>
+                </a>
 				{% endfor %}
 			</div>
 		</div>
