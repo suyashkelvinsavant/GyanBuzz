@@ -8,11 +8,7 @@
             <a href="{{ postslist[postslist.length-1].url | url }}">
                     <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://source.unsplash.com/random/720x400" alt="content">
                     <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">SUBTITLE</h3>
-                    <h2 class="text-lg text-white font-medium title-font mb-4">{% if postslist[postslist.length-1].data.title %}
-								{{ postslist[postslist.length-1].data.title }}
-								{% else %}
-								Untitled
-								{% endif %}</h2>
+                    <h2 class="text-lg text-white font-medium title-font mb-4">{% if postslist[postslist.length-1].data.title %}{{ postslist[postslist.length-1].data.title }}{% else %}Untitled{% endif %}</h2>
                     <p class="leading-relaxed text-base">{{ postslist[postslist.length-1].data.summary }}</p>
             </a>
                 </div>
@@ -22,7 +18,7 @@
             <a href="{{ postslist[postslist.length-2].url | url }}">
                     <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://source.unsplash.com/random/721x401" alt="content">
                     <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">SUBTITLE</h3>
-                    <h2 class="text-lg text-white font-medium title-font mb-4">Colosseum Roma</h2>
+                    <h2 class="text-lg text-white font-medium title-font mb-4">{% if postslist[postslist.length-2].data.title %}{{ postslist[postslist.length-2].data.title }}{% else %}Untitled{% endif %}</h2>
                     <p class="leading-relaxed text-base">{{ postslist[postslist.length-2].data.summary }}</p>
                     </a>
                 </div>
@@ -33,7 +29,7 @@
 
                     <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://source.unsplash.com/random/722x402" alt="content">
                     <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">SUBTITLE</h3>
-                    <h2 class="text-lg text-white font-medium title-font mb-4">Great Pyramid of Giza</h2>
+                    <h2 class="text-lg text-white font-medium title-font mb-4">{% if postslist[postslist.length-3].data.title %}{{ postslist[postslist.length-3].data.title }}{% else %}Untitled{% endif %}</h2>
                     <p class="leading-relaxed text-base">{{ postslist[postslist.length-3].data.summary }}</p>
                     </a>
                 </div>
@@ -49,7 +45,7 @@
 
                     <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://source.unsplash.com/random/722x402" alt="content">
                     <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">SUBTITLE</h3>
-                    <h2 class="text-lg text-white font-medium title-font mb-4">Great Pyramid of Giza</h2>
+                    <h2 class="text-lg text-white font-medium title-font mb-4">{% if postslist[postslist.length-4].data.title %}{{ postslist[postslist.length-4].data.title }}{% else %}Untitled{% endif %}</h2>
                     <p class="leading-relaxed text-base">{{ postslist[postslist.length-4].data.summary }}</p>
                     </a>
                 </div>
@@ -60,7 +56,7 @@
 
                     <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://source.unsplash.com/random/720x400" alt="content">
                     <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">SUBTITLE</h3>
-                    <h2 class="text-lg text-white font-medium title-font mb-4">Chichen Itza</h2>
+                    <h2 class="text-lg text-white font-medium title-font mb-4">{% if postslist[postslist.length-5].data.title %}{{ postslist[postslist.length-5].data.title }}{% else %}Untitled{% endif %}</h2>
                     <p class="leading-relaxed text-base">{{ postslist[postslist.length-5].data.summary }}</p>
                     </a>
                 </div>
@@ -71,7 +67,7 @@
 
                     <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://source.unsplash.com/random/721x401" alt="content">
                     <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">SUBTITLE</h3>
-                    <h2 class="text-lg text-white font-medium title-font mb-4">Colosseum Roma</h2>
+                    <h2 class="text-lg text-white font-medium title-font mb-4">{% if postslist[postslist.length-6].data.title %}{{ postslist[postslist.length-6].data.title }}{% else %}Untitled{% endif %}</h2>
                     <p class="leading-relaxed text-base">{{ postslist[postslist.length-6].data.summary }}</p>
                     </a>
                 </div>
