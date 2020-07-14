@@ -1,0 +1,80 @@
+{% set postslist = collections.post %}
+<section class="text-gray-700 bg-black body-font">
+  <div class="container px-1 py-2 mx-auto flex flex-wrap">
+    <div class="flex flex-wrap md:-m-2 -m-1">
+      <div class="flex flex-wrap w-1/2">
+        <div class="md:p-2 p-1 w-1/2">
+        <a href="{{ postslist[postslist.length-1].url | url }}">
+          <img alt="gallery" class="w-full rounded-lg object-cover h-full object-center block" src="https://source.unsplash.com/random/500x300">
+          </a>
+        </div>
+        <div class="md:p-2 p-1 w-1/2">
+        <a href="{{ postslist[postslist.length-2].url | url }}">
+          <img alt="gallery" class="w-full rounded-lg object-cover h-full object-center block" src="https://source.unsplash.com/random/501x301">
+          </a>
+        </div>
+        <div class="md:p-2 p-1 w-full">
+        <a href="{{ postslist[postslist.length-3].url | url }}">
+          <img alt="gallery" class="w-full rounded-lg h-full object-cover object-center block" src="https://source.unsplash.com/random/600x360">
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-wrap w-1/2">
+        <div class="md:p-2 p-1 w-full">
+        <a href="{{ postslist[postslist.length-4].url | url }}">
+          <img alt="gallery" class="w-full h-full rounded-lg object-cover object-center block" src="https://source.unsplash.com/random/601x361">
+          </a>
+        </div>
+        <div class="md:p-2 p-1 w-1/2">
+        <a href="{{ postslist[postslist.length-5].url | url }}">
+          <img alt="gallery" class="w-full object-cover rounded-lg h-full object-center block" src="https://source.unsplash.com/random/502x302">
+          </a>
+        </div>
+        <div class="md:p-2 p-1 w-1/2">
+        <a href="{{ postslist[postslist.length-6].url | url }}">
+          <img alt="gallery" class="w-full object-cover rounded-lg h-full object-center block" src="https://source.unsplash.com/random/503x303">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="text-gray-700 bg-black body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-200">GyanBuzz Gallery</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Moments that define US</p>
+    </div>
+    <div class="flex flex-wrap -m-4">
+      {% for post in postslist | reverse %}
+        <div class="lg:w-1/3 sm:w-1/2 p-4">
+          <div class="flex relative">
+          <a  href="{{ post.url | url }}">
+            <img alt="gallery" class="absolute rounded-lg inset-0 w-full h-full object-cover object-center" src="https://source.unsplash.com/random/720x400">
+            </a>
+            <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+              <h2 class="tracking-widest text-sm title-font font-medium text-pink-500 mb-1">{% if post.data.tags %}
+						<p>
+							{% for tag in post.data.tags %}
+							{%- if tag != "post" -%}
+							{% set tagUrl %}/tags/{{ tag }}/{% endset %}
+							<a href="{{ tagUrl | url }}" rel="tag">{{ tag | upper }}</a>
+							{%- endif -%}
+							{% endfor %}
+						</p>
+						{% endif %}</h2>
+              <a  href="{{ post.url | url }}">
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{% if post.data.title %}
+								{{ post.data.title }}
+								{% else %}
+								Untitled
+								{% endif %}</h1>
+              <p class="leading-relaxed">{{post.data.summary | truncate(30, true, "...")}}</p>
+              </a>
+            </div>
+          </div>
+        </div>
+    {% endfor %}
+    </div>
+  </div>
+</section>
