@@ -7,7 +7,8 @@
                 <div class="bg-black p-6">
             <a href="{{ postslist[postslist.length-1].url | url }}">
                     <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://source.unsplash.com/random/720x400" alt="content">
-                    <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">{% if postslist[0].data.tags %}
+                    </a>
+					<h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">{% if postslist[0].data.tags %}
 						<p>
 							{% for tag in postslist[postslist.length-1].data.tags %}
 							{%- if tag != "post" -%}
@@ -17,8 +18,9 @@
 							{% endfor %}
 						</p>
 						{% endif %}</h3>
+						<a href="{{ postslist[postslist.length-1].url | url }}">
                     <h2 class="text-lg text-white font-medium title-font mb-4">{% if postslist[postslist.length-1].data.title %}{{ postslist[postslist.length-1].data.title }}{% else %}Untitled{% endif %}</h2>
-                    <p class="leading-relaxed text-base">{{ postslist[postslist.length-1].data.summary }}</p>
+                    <p class="leading-relaxed text-base">{{ postslist[postslist.length-1].data.summary | truncate(65, true, "...") }}</p>
             </a>
                 </div>
             </div>
@@ -26,6 +28,7 @@
                 <div class="bg-black p-6">
             <a href="{{ postslist[postslist.length-2].url | url }}">
                     <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://source.unsplash.com/random/721x401" alt="content">
+				</a>	
                     <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">{% if postslist[0].data.tags %}
 						<p>
 							{% for tag in postslist[postslist.length-2].data.tags %}
@@ -36,8 +39,10 @@
 							{% endfor %}
 						</p>
 						{% endif %}</h3>
+            <a href="{{ postslist[postslist.length-2].url | url }}">
+
                     <h2 class="text-lg text-white font-medium title-font mb-4">{% if postslist[postslist.length-2].data.title %}{{ postslist[postslist.length-2].data.title }}{% else %}Untitled{% endif %}</h2>
-                    <p class="leading-relaxed text-base">{{ postslist[postslist.length-2].data.summary }}</p>
+                    <p class="leading-relaxed text-base">{{ postslist[postslist.length-2].data.summary | truncate(65, true, "...")}}</p>
                     </a>
                 </div>
             </div>
@@ -46,6 +51,7 @@
             <a href="{{ postslist[postslist.length-3].url | url }}">
 
                     <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://source.unsplash.com/random/722x402" alt="content">
+					</a>
                     <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">{% if postslist[0].data.tags %}
 						<p>
 							{% for tag in postslist[postslist.length-3].data.tags %}
@@ -56,8 +62,10 @@
 							{% endfor %}
 						</p>
 						{% endif %}</h3>
+            <a href="{{ postslist[postslist.length-3].url | url }}">
+
                     <h2 class="text-lg text-white font-medium title-font mb-4">{% if postslist[postslist.length-3].data.title %}{{ postslist[postslist.length-3].data.title }}{% else %}Untitled{% endif %}</h2>
-                    <p class="leading-relaxed text-base">{{ postslist[postslist.length-3].data.summary }}</p>
+                    <p class="leading-relaxed text-base">{{ postslist[postslist.length-3].data.summary | truncate(90, true, "...") }}</p>
                     </a>
                 </div>
             </div>
@@ -71,6 +79,7 @@
             <a href="{{ postslist[postslist.length-4].url | url }}">
 
                     <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://source.unsplash.com/random/722x402" alt="content">
+					</a>
                     <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">{% if postslist[0].data.tags %}
 						<p>
 							{% for tag in postslist[postslist.length-4].data.tags %}
@@ -81,8 +90,10 @@
 							{% endfor %}
 						</p>
 						{% endif %}</h3>
+            <a href="{{ postslist[postslist.length-4].url | url }}">
+
                     <h2 class="text-lg text-white font-medium title-font mb-4">{% if postslist[postslist.length-4].data.title %}{{ postslist[postslist.length-4].data.title }}{% else %}Untitled{% endif %}</h2>
-                    <p class="leading-relaxed text-base">{{ postslist[postslist.length-4].data.summary }}</p>
+                    <p class="leading-relaxed text-base">{{ postslist[postslist.length-4].data.summary | truncate(90, true, "...")}}</p>
                     </a>
                 </div>
             </div>
@@ -91,6 +102,7 @@
             <a href="{{ postslist[postslist.length-5].url | url }}">
 
                     <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://source.unsplash.com/random/720x400" alt="content">
+					</a>
                     <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">{% if postslist[0].data.tags %}
 						<p>
 							{% for tag in postslist[postslist.length-5].data.tags %}
@@ -101,8 +113,10 @@
 							{% endfor %}
 						</p>
 						{% endif %}</h3>
+            <a href="{{ postslist[postslist.length-5].url | url }}">
+
                     <h2 class="text-lg text-white font-medium title-font mb-4">{% if postslist[postslist.length-5].data.title %}{{ postslist[postslist.length-5].data.title }}{% else %}Untitled{% endif %}</h2>
-                    <p class="leading-relaxed text-base">{{ postslist[postslist.length-5].data.summary }}</p>
+                    <p class="leading-relaxed text-base">{{ postslist[postslist.length-5].data.summary | truncate(65, true, "...")}}</p>
                     </a>
                 </div>
             </div>
@@ -111,6 +125,7 @@
             <a href="{{ postslist[postslist.length-6].url | url }}">
 
                     <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://source.unsplash.com/random/721x401" alt="content">
+					</a>
                     <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">{% if postslist[0].data.tags %}
 						<p>
 							{% for tag in postslist[postslist.length-6].data.tags %}
@@ -121,8 +136,10 @@
 							{% endfor %}
 						</p>
 						{% endif %}</h3>
+            <a href="{{ postslist[postslist.length-6].url | url }}">
+						
                     <h2 class="text-lg text-white font-medium title-font mb-4">{% if postslist[postslist.length-6].data.title %}{{ postslist[postslist.length-6].data.title }}{% else %}Untitled{% endif %}</h2>
-                    <p class="leading-relaxed text-base">{{ postslist[postslist.length-6].data.summary }}</p>
+                    <p class="leading-relaxed text-base">{{ postslist[postslist.length-6].data.summary | truncate(65, true, "...")}}</p>
                     </a>
                 </div>
             </div>
@@ -136,7 +153,7 @@
 		<div class="container px-5 py-24 mx-auto">
 			<div class="-my-8">
 				
-				{% for post in postslist | reverse %}
+				{% for post in postslist.slice(0,5) | reverse %}
 		
                 
 				<div class="py-8 flex flex-wrap md:flex-no-wrap">
