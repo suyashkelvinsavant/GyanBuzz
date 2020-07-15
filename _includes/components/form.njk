@@ -1,9 +1,50 @@
-<form name="contact" method="POST" netlify>
-  <label for="name">Name</label>
-  <input type="text" name="name" id="name" autocomplete="name" placeholder="Your name" title="Please enter your name" required>
-  <label for="email">Email</label>
-  <input type="email" name="email" id="email" autocomplete="email" placeholder="Your email address" title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
-  <label for="message">Message</label>
-  <textarea name="message" id="message" placeholder="Write your message here" rows="7" required></textarea>
-  <button type="submit" name="submit">Send Message</button>
-</form>
+  <div class="bg-black min-h-screen flex flex-col">
+    <div class="container max-w-sm mx-auto my-24 flex-1 flex flex-col items-center justify-center px-2">
+        <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
+            <h1 class="mb-8 text-3xl text-center">Contact Us</h1>
+            <form name="contact" method="POST" netlify>
+                <div class="mb-4">
+
+                    <label class="font-bold text-gray-900 block mb-2" for="name">Name</label>
+                    <input
+                        class="block appearance-none w-full bg-white border border-grey-light hover:border-grey px-2 py-2 rounded shadow"
+                        type="text" name="name" id="name" autocomplete="name" placeholder="Your name"
+                        title="Please enter your name" required>
+                </div>
+                <div class="mb-4">
+
+                    <label class="font-bold text-gray-900 block mb-2" for="email">Email</label>
+                    <input
+                        class="block appearance-none w-full bg-white border border-grey-light hover:border-grey px-2 py-2 rounded shadow"
+                        type="email" name="email" id="email" autocomplete="email" placeholder="Your email address"
+                        title="The domain portion of the email address is invalid (the portion after the @)."
+                        pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$"
+                        required>
+                </div>
+                <div class="mb-4">
+
+                    <label class="font-bold text-gray-900 block mb-2" for="message">Message</label>
+                    <textarea
+                        class="block appearance-none w-full bg-white border border-grey-light hover:border-grey px-2 py-2 rounded shadow"
+                        name="message" id="message" placeholder="Write your message here" rows="7"
+                        required></textarea>
+                </div>
+                <div class="flex items-center justify-center">
+                    <div class="registerButton p-1 m-2 rounded-lg md:m-1 sm:m-0 border-none">
+                        
+                        <button class="items-center bg-gray-900 hover:bg-black hover:text-pink-500 border-none rounded-lg text-white text-sm py-1 px-2 md:py-2 md:px-4 md:text-base" type="submit" name="submit">Send Message</button>
+                    </div>
+                </div>
+            </form>
+            <div class="text-center text-sm text-gray-900 mt-4">
+                By filling this form in, you agree to the
+                <a class="no-underline border-b border-grey-dark text-gray-900" href="terms">
+                    Terms of Service
+                </a> and
+                <a class="no-underline border-b border-grey-dark text-gray-900" href="privacypolicy">
+                    Privacy Policy
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
