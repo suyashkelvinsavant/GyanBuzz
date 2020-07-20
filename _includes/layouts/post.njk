@@ -2,29 +2,49 @@
 layout: layouts/base.njk
 section: post
 ---
-<article>
-  <h1>{{ title }}</h1>
-  <p>
-    <small>
-      <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time> by <a href="/authors/{{ author | slug }}/">{{ author }}</a>
-    </small>
-  </p>
-  {{ layoutContent | safe }} 
-  
-  {% if tags %}
-    <p>
-    {% for tag in tags %}
-      {%- if tag != "post" -%}
-        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-        <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
-      {%- endif -%}
-    {% endfor %}
-    </p>
-  {% endif %}
+<!-- component -->
+<div class="max-w-screen-lg mx-auto">
 
-</article>
+
+  <main class="mt-10">
+
+    <article>
+      <div class="mb-4 md:mb-0 w-full mx-auto relative">
+        <div class="px-4 lg:px-0">
+
+          <h1 class="md:text-4xl text-2xl font-semibold text-gray-800 leading-tight">{{ title }}</h1>
+          <p>
+            <small>
+              <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time> by <a
+                href="/authors/{{ author | slug }}/">{{ author }}</a>
+            </small>
+          </p>
+          {% if tags %}
+          <p>
+            {% for tag in tags %}
+            {%- if tag != "post" -%}
+            {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+            <a href="{{ tagUrl | url }}" rel="tag"
+              class="py-2 text-pink-700 inline-flex items-center text-sm md:text-lg justify-center mb-2">{{ tag | upper}}</a>
+            {%- endif -%}
+            {% endfor %}
+          </p>
+          {% endif %}
+
+        </div>
+      </div>
+
+      <div class="flex flex-col lg:flex-row lg:space-x-12">
+
+        <div class="px-4 lg:px-0 mt-12 text-gray-700 text-md md:text-lg  leading-relaxed w-full lg:w-3/4">
+          {{ layoutContent | safe }}
+        </div>
+      </div>
+    </article>
+  </main>
+  <!-- main ends here -->
+</div>
 
 <nav>
-  <a href="{{ '/' | url }}">← Back</a>
+  <a href="{{ '/' | url }}" class="px-10 text-md text-pink-700 font-bold">Get Back</a>
 </nav>
-
