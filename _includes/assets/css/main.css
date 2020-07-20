@@ -98,3 +98,12 @@ html::-webkit-scrollbar-track {
 .text-pink-500{
   color:#ff007b
 }
+.border-wrap {
+  max-width: 240px;
+  padding: 1px;
+  position: relative;
+  background: linear-gradient(155deg, #ff8a00, #e52e71);
+}
+.widthk{
+  width: 20rem;
+}
