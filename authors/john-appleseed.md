@@ -1,5 +1,6 @@
 ---
 name: John Appleseed
 email: johnappleseed@example.com
-github: https://github.com/notjohnappleseed
+github: notjohnappleseed
+quote: Hello Everyone my name is John Appleseed
 ---

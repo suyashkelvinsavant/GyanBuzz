@@ -1,5 +1,6 @@
 ---
 name: John Doe
 email: johndoe@example.com
-github: https://github.com/notjohndoe
+github: notjohndoe
+quote: Hello Everyone my name is John doe
 ---

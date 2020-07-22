@@ -2,11 +2,24 @@
 layout: layouts/base.njk
 section: author
 ---
-<h1>{{ name }}</h1>
-
+<section class="text-gray-500 bg-black body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+      <h2 class="bg-black text-white text-center text-4xl">Writer</h2>
+      <a href="https://github.com/{{ github }}">
+        <img alt="{{ name }}" title="{{ name }}"
+          class="widthk mb-8 mt-12 object-cover object-center rounded-full inline-block"
+          src="https://github.com/{{ github }}.png">
+        <br>
+        <span class="inline-block h-1 w-10 rounded bg-pink-500 mt-8 mb-6"></span>
+        <h1 class="text-white font-medium title-font tracking-wider text-lg">{{ name }}</h1>
+        <br>
 <p><a href="mailto:{{ email }}">{{ email }}</a></p>
-<p><a href="{{ github }}">View on GitHub</a></p>
-
-<nav>
-  <a href="{{ '/' | url }}">← Get Back</a>
+        <p class="leading-relaxed text-md">{{ quote }}</p>
+      </a>
+    </div>
+  </div>
+</section>
+<nav class="bg-black">
+  <a href="{{ '/' | url }}" class="px-20 py-5 bg-black md:py-10 inline-flex text-md text-pink-700 font-bold"><svg width="15px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="svg-inline--fa fa-arrow-left fa-w-14" data-icon="arrow-left" data-prefix="fas" viewBox="0 0 448 512"><defs/><path fill="currentColor" d="M258 445l-23 22c-9 10-24 10-34 0L7 273c-9-9-9-25 0-34L201 45c10-10 25-10 34 0l23 22c9 9 9 25-1 34L137 216h287c13 0 24 11 24 24v32c0 13-11 24-24 24H137l120 115c10 9 10 25 1 34z"/></svg>&nbsp;Get Back</a>
 </nav>

@@ -1,5 +1,6 @@
 ---
 name: Dan Urbanowicz
 email: dan.urbanowicz@gmail.com
-github: https://github.com/danurbanowicz
+github: danurbanowicz
+quote: Hello Everyone my name is Dan Urbanowicz
 ---
