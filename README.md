@@ -1,1 +1,1 @@
-# WELCOME To The GyanBuzz Project Made by Suyash Kelvin Savant
+# WELCOME To The GyanBuzz Project Made by Suyash Kelvin Savant For the Official College Blog
