@@ -5,34 +5,34 @@
       <div class="flex flex-wrap w-1/2">
         <div class="md:p-2 p-1 w-1/2">
         <a href="{{ postslist[postslist.length-1].url | url }}">
-          <img alt="gallery" class="w-full rounded-lg object-cover h-full object-center block" src="https://source.unsplash.com/random/500x300">
+          <img alt="gallery image 1" class="w-full rounded-lg object-cover h-full object-center block" src="/static/img/{% if postslist[postslist.length-1].data.title %}{{ postslist[postslist.length-1].data.title |slug}}{% else %}untitled{% endif %}.jpg">
           </a>
         </div>
         <div class="md:p-2 p-1 w-1/2">
         <a href="{{ postslist[postslist.length-2].url | url }}">
-          <img alt="gallery" class="w-full rounded-lg object-cover h-full object-center block" src="https://source.unsplash.com/random/501x301">
+          <img alt="gallery" class="w-full rounded-lg object-cover h-full object-center block" src="/static/img/{% if postslist[postslist.length-2].data.title %}{{ postslist[postslist.length-2].data.title |slug}}{% else %}untitled{% endif %}.jpg">
           </a>
         </div>
         <div class="md:p-2 p-1 w-full">
         <a href="{{ postslist[postslist.length-3].url | url }}">
-          <img alt="gallery" class="w-full rounded-lg h-full object-cover object-center block" src="https://source.unsplash.com/random/600x360">
+          <img alt="gallery" class="w-full rounded-lg h-full object-cover object-center block" src="/static/img/{% if postslist[postslist.length-3].data.title %}{{ postslist[postslist.length-3].data.title |slug}}{% else %}untitled{% endif %}.jpg">
           </a>
         </div>
       </div>
       <div class="flex flex-wrap w-1/2">
         <div class="md:p-2 p-1 w-full">
         <a href="{{ postslist[postslist.length-4].url | url }}">
-          <img alt="gallery" class="w-full h-full rounded-lg object-cover object-center block" src="https://source.unsplash.com/random/601x361">
+          <img alt="gallery" class="w-full h-full rounded-lg object-cover object-center block" src="/static/img/{% if postslist[postslist.length-4].data.title %}{{ postslist[postslist.length-4].data.title |slug}}{% else %}untitled{% endif %}.jpg">
           </a>
         </div>
         <div class="md:p-2 p-1 w-1/2">
         <a href="{{ postslist[postslist.length-5].url | url }}">
-          <img alt="gallery" class="w-full object-cover rounded-lg h-full object-center block" src="https://source.unsplash.com/random/502x302">
+          <img alt="gallery" class="w-full object-cover rounded-lg h-full object-center block" src="/static/img/{% if postslist[postslist.length-5].data.title %}{{ postslist[postslist.length-5].data.title |slug}}{% else %}untitled{% endif %}.jpg">
           </a>
         </div>
         <div class="md:p-2 p-1 w-1/2">
         <a href="{{ postslist[postslist.length-6].url | url }}">
-          <img alt="gallery" class="w-full object-cover rounded-lg h-full object-center block" src="https://source.unsplash.com/random/503x303">
+          <img alt="gallery" class="w-full object-cover rounded-lg h-full object-center block" src="/static/img/{% if postslist[postslist.length-6].data.title %}{{ postslist[postslist.length-6].data.title |slug}}{% else %}untitled{% endif %}.jpg">
           </a>
         </div>
       </div>
@@ -42,7 +42,7 @@
 <section class="text-gray-700 bg-black body-font">
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-col text-center w-full mb-20">
-      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-200">GyanBuzz Gallery</h1>
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-200">GyanBuzz Gallery</h1> 
       <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Moments that define US</p>
     </div>
     <div class="flex flex-wrap -m-4">
@@ -50,7 +50,7 @@
         <div class="lg:w-1/3 sm:w-1/2 p-4">
           <div class="flex relative">
           <a  href="{{ post.url | url }}">
-            <img alt="gallery" class="absolute rounded-lg inset-0 w-full h-full object-cover object-center" src="https://source.unsplash.com/random/720x400">
+            <img alt="gallery" class="absolute rounded-lg inset-0 w-full h-full object-cover object-center" src="/static/img/{% if post.data.title %}{{ post.data.title | slug}}{% else %}Untitled{% endif %}.jpg">
             </a>
             <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
               <h2 class="tracking-widest text-sm title-font font-medium text-pink-500 mb-1">{% if post.data.tags %}
@@ -69,7 +69,7 @@
 								{% else %}
 								Untitled
 								{% endif %}</h1>
-              <p class="leading-relaxed">{{post.data.summary | truncate(30, true, "...")}}</p>
+              <p class="leading-relaxed">{{post.data.summary | truncate(45, true, "...")}}</p>
               </a>
             </div>
           </div>
