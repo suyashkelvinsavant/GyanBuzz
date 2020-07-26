@@ -7,7 +7,7 @@
             <a href="{{ postslist[postslist.length-1].url | url }}">
                     <img class="h-40 rounded w-full object-cover object-center mb-6" src="/static/img/{% if postslist[postslist.length-1].data.title %}{{ postslist[postslist.length-1].data.title |slug}}{% else %}untitled{% endif %}.jpg" alt="content">
                     </a>
-					<h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">{% if postslist[0].data.tags %}
+					<h3 class="tracking-widest text-gyanbuzz-pink text-xs font-medium title-font">{% if postslist[0].data.tags %}
 						<p>
 							{% for tag in postslist[postslist.length-1].data.tags %}
 							{%- if tag != "post" -%}
@@ -28,7 +28,7 @@
             <a href="{{ postslist[postslist.length-2].url | url }}">
                     <img class="h-40 rounded w-full object-cover object-center mb-6" src="/static/img/{% if postslist[postslist.length-2].data.title %}{{ postslist[postslist.length-2].data.title |slug}}{% else %}untitled{% endif %}.jpg" alt="content">
 				</a>	
-                    <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">{% if postslist[0].data.tags %}
+                    <h3 class="tracking-widest text-gyanbuzz-pink text-xs font-medium title-font">{% if postslist[0].data.tags %}
 						<p>
 							{% for tag in postslist[postslist.length-2].data.tags %}
 							{%- if tag != "post" -%}
@@ -51,7 +51,7 @@
 
                     <img class="h-40 rounded w-full object-cover object-center mb-6" src="/static/img/{% if postslist[postslist.length-3].data.title %}{{ postslist[postslist.length-3].data.title |slug}}{% else %}untitled{% endif %}.jpg" alt="content">
 					</a>
-                    <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">{% if postslist[0].data.tags %}
+                    <h3 class="tracking-widest text-gyanbuzz-pink text-xs font-medium title-font">{% if postslist[0].data.tags %}
 						<p>
 							{% for tag in postslist[postslist.length-3].data.tags %}
 							{%- if tag != "post" -%}
@@ -79,7 +79,7 @@
 
                     <img class="h-40 rounded w-full object-cover object-center mb-6" src="/static/img/{% if postslist[postslist.length-4].data.title %}{{ postslist[postslist.length-4].data.title |slug}}{% else %}untitled{% endif %}.jpg" alt="content">
 					</a>
-                    <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">{% if postslist[0].data.tags %}
+                    <h3 class="tracking-widest text-gyanbuzz-pink text-xs font-medium title-font">{% if postslist[0].data.tags %}
 						<p>
 							{% for tag in postslist[postslist.length-4].data.tags %}
 							{%- if tag != "post" -%}
@@ -102,7 +102,7 @@
 
                     <img class="h-40 rounded w-full object-cover object-center mb-6" src="/static/img/{% if postslist[postslist.length-5].data.title %}{{ postslist[postslist.length-5].data.title |slug}}{% else %}untitled{% endif %}.jpg" alt="content">
 					</a>
-                    <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">{% if postslist[0].data.tags %}
+                    <h3 class="tracking-widest text-gyanbuzz-pink text-xs font-medium title-font">{% if postslist[0].data.tags %}
 						<p>
 							{% for tag in postslist[postslist.length-5].data.tags %}
 							{%- if tag != "post" -%}
@@ -125,7 +125,7 @@
 
                     <img class="h-40 rounded w-full object-cover object-center mb-6" src="/static/img/{% if postslist[postslist.length-6].data.title %}{{ postslist[postslist.length-6].data.title |slug}}{% else %}untitled{% endif %}.jpg" alt="content">
 					</a>
-                    <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">{% if postslist[0].data.tags %}
+                    <h3 class="tracking-widest text-gyanbuzz-pink text-xs font-medium title-font">{% if postslist[0].data.tags %}
 						<p>
 							{% for tag in postslist[postslist.length-6].data.tags %}
 							{%- if tag != "post" -%}
@@ -192,7 +192,7 @@
 						</p></a>
 						{% endif %}
 
-						<a class="text-pink-500 inline-flex items-center mt-4" href="{{ post.url | url }}">Read
+						<a class="text-gyanbuzz-pink inline-flex items-center mt-4" href="{{ post.url | url }}">Read
 							More
 							<svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
 								fill="none" stroke-linecap="round" stroke-linejoin="round">

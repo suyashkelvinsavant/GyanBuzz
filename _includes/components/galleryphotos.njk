@@ -53,7 +53,7 @@
             <img alt="gallery" class="absolute rounded-lg inset-0 w-full h-full object-cover object-center" src="/static/img/{% if post.data.title %}{{ post.data.title | slug}}{% else %}Untitled{% endif %}.jpg">
             </a>
             <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-              <h2 class="tracking-widest text-sm title-font font-medium text-pink-500 mb-1">{% if post.data.tags %}
+              <h2 class="tracking-widest text-sm title-font font-medium text-gyanbuzz-pink mb-1">{% if post.data.tags %}
 						<p>
 							{% for tag in post.data.tags %}
 							{%- if tag != "post" -%}
