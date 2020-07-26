@@ -5,7 +5,10 @@
   <title>{{ title or renderData.title or metadata.title }}</title>
   <link rel="shortcut icon" href="/_includes/assets/images/favicon.svg" type="image/x-icon">
   <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <link rel="stylesheet" href="/_includes/assets/css/base.css">
+  {% set css %}
+    {% include "assets/css/base.css" %}
+  {% endset %}
+  <style>{{ css | cssmin | safe }}</style>
   {% set js %}
     {% include "assets/js/inline.js" %}      
   {% endset %}
