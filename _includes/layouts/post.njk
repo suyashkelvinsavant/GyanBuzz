@@ -12,19 +12,17 @@ section: post
   gtag('config', 'UA-139183272-2');
 </script>
 <div class="max-w-screen-lg mx-auto">
-
-
   <main class="mt-10">
 
     <article>
       <div class="mb-4 md:mb-0 w-full mx-auto relative">
         <div class="px-4 lg:px-0">
 
-          <h1 class="md:text-4xl text-2xl font-semibold text-gray-800 leading-tight">{{ title }}</h1>
-          <p>
+          <h1 class="md:text-4xl text-2xl font-bold text-gray-800 leading-tight">{{ title }}</h1>
+          <p class="font-bold">
             <small>
               <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time> by <a
-                href="/authors/{{ author | slug }}/">{{ author }}</a>
+ class="text-gyanbuzz-pink"               href="/authors/{{ author | slug }}/">{{ author }}</a>
             </small>
           </p>
           {% if tags %}
@@ -33,7 +31,7 @@ section: post
             {%- if tag != "post" -%}
             {% set tagUrl %}/tags/{{ tag }}/{% endset %}
             <a href="{{ tagUrl | url }}" rel="tag"
-              class="py-2 text-pink-700 inline-flex items-center text-sm md:text-lg justify-center mb-2">{{ tag | upper}}&nbsp;&nbsp;</a>
+              class="py-2 text-gyanbuzz-pink inline-flex items-center text-sm md:text-lg justify-center mb-2">{{ tag | upper}}&nbsp;&nbsp;</a>
             {%- endif -%}
             {% endfor %}
           </p>
@@ -41,9 +39,9 @@ section: post
         
         </div>
       </div>
- <img src="/static/img/{% if title %}{{ title | slug}}{% else %}untitled{% endif %}.webp" class="w-full object-cover lg:rounded" style="height: 28em;"/>
-      <div class="flex flex-col lg:flex-row lg:space-x-12">
-        <div class="px-4 lg:px-0 mt-5 text-gray-700 text-md md:text-lg  leading-relaxed w-full lg:w-3/4">
+ <img src="/static/img/{% if title %}{{ title | slug}}{% else %}untitled{% endif %}.webp" alt="{% if title %}{{ title }}{% else %}untitled{% endif %}"class="w-full object-cover lg:rounded" style="height: 28em;"/>
+      <div class="flex flex-col lg:flex-row justify-center lg:space-x-12">
+        <div class="px-4 lg:px-0 mt-5 text-gray-800 font-medium text-md md:text-lg  leading-relaxed w-full lg:w-3/4">
           {{ layoutContent | safe }}
         </div>
       </div>
@@ -53,5 +51,5 @@ section: post
 </div>
 
 <nav>
-  <a href="{{ '/' | url }}" class="px-20 py-5 md:py-10 inline-flex text-md text-pink-700 font-bold"><svg width="15px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="svg-inline--fa fa-arrow-left fa-w-14" data-icon="arrow-left" data-prefix="fas" viewBox="0 0 448 512"><defs/><path fill="currentColor" d="M258 445l-23 22c-9 10-24 10-34 0L7 273c-9-9-9-25 0-34L201 45c10-10 25-10 34 0l23 22c9 9 9 25-1 34L137 216h287c13 0 24 11 24 24v32c0 13-11 24-24 24H137l120 115c10 9 10 25 1 34z"/></svg>&nbsp;Get Back</a>
+  <a href="{{ '/' | url }}" class="px-20 py-5 md:py-10 inline-flex text-md text-gyanbuzz-pink font-bold"><svg width="15px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="svg-inline--fa fa-arrow-left fa-w-14" data-icon="arrow-left" data-prefix="fas" viewBox="0 0 448 512"><defs/><path fill="currentColor" d="M258 445l-23 22c-9 10-24 10-34 0L7 273c-9-9-9-25 0-34L201 45c10-10 25-10 34 0l23 22c9 9 9 25-1 34L137 216h287c13 0 24 11 24 24v32c0 13-11 24-24 24H137l120 115c10 9 10 25 1 34z"/></svg>&nbsp;Get Back</a>
 </nav>
