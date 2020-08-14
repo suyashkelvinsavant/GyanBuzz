@@ -152,7 +152,7 @@
 		<div class="container px-5 py-24 mx-auto">
 			<div class="-my-8">
 				
-				{% for post in postslist.slice(0,5) | reverse %}
+				{% for post in postslist.slice(0,5) | reverse | head(-40)%}
 		
                 
 				<div class="py-8 flex flex-wrap md:flex-no-wrap">

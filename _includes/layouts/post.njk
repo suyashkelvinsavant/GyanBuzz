@@ -17,7 +17,7 @@ section: post
     <article>
       <div class="mb-4 md:mb-0 w-full mx-auto relative">
         <div class="px-4 lg:px-0">
-
+ <img src="/static/img/{% if title %}{{ title | slug}}{% else %}untitled{% endif %}.webp" alt="{% if title %}{{ title }}{% else %}untitled{% endif %}"class="w-full object-cover lg:rounded" style="height: 28em;"/>
           <h1 class="md:text-4xl text-2xl font-bold text-gray-800 leading-tight">{{ title }}</h1>
           <p class="font-bold">
             <small>
@@ -39,7 +39,6 @@ section: post
         
         </div>
       </div>
- <img src="/static/img/{% if title %}{{ title | slug}}{% else %}untitled{% endif %}.webp" alt="{% if title %}{{ title }}{% else %}untitled{% endif %}"class="w-full object-cover lg:rounded" style="height: 28em;"/>
       <div class="flex flex-col lg:flex-row justify-center lg:space-x-12">
         <div class="px-4 lg:px-0 mt-5 text-gray-800 font-medium text-md md:text-lg  leading-relaxed w-full lg:w-3/4">
           {{ layoutContent | safe }}

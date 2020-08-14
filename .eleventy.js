@@ -58,6 +58,14 @@ module.exports = function(eleventyConfig) {
     return content;
   });
 
+  eleventyConfig.addFilter("head", (array, n) => {
+    if( n < 0 ) {
+      return array.slice(n);
+    }
+
+    return array.slice(0, n);
+  });
+
   // Universal slug filter strips unsafe chars from URLs
   eleventyConfig.addFilter("slugify", function(str) {
     return slugify(str, {
